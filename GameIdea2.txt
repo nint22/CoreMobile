@@ -1,0 +1,9 @@
+Project Name: String Roller
+Type: Physics Puzzle
+Theme: A child-themed rope-stylized old 40's game
+
+WiiU game
+
+A world is a simple 3D rendered world but laid out in 2D tiles: we're going to follow 
+
+The overall game screen is as follows:

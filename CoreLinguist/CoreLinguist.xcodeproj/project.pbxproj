@@ -16,9 +16,14 @@
 		060A0F2E163B4D820074BE29 /* LetterformsView.js in Resources */ = {isa = PBXBuildFile; fileRef = 060A0F2D163B4D820074BE29 /* LetterformsView.js */; };
 		060A0F32163B56E10074BE29 /* ClassicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 060A0F30163B56E10074BE29 /* ClassicViewController.m */; };
 		060A0F33163B56E10074BE29 /* ClassicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 060A0F31163B56E10074BE29 /* ClassicViewController.xib */; };
+		061F8C4516B0A77D003D58C6 /* CMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 061F8C4416B0A77D003D58C6 /* CMObject.m */; };
 		065FF3F1169BCF2300D5AE33 /* Example1.js in Sources */ = {isa = PBXBuildFile; fileRef = 065FF3F0169BCF2300D5AE33 /* Example1.js */; };
 		065FF3F5169BD04900D5AE33 /* CMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FF3F4169BD04900D5AE33 /* CMParser.m */; };
 		065FF3F8169BD26C00D5AE33 /* CMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FF3F7169BD26C00D5AE33 /* CMWindow.m */; };
+		066E031A16B48D9400F4726F /* CMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 066E031916B48D9400F4726F /* CMBaseView.m */; };
+		066E032116B48E1A00F4726F /* CMBaseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 066E031C16B48E1A00F4726F /* CMBaseWindow.m */; };
+		066E032216B48E1A00F4726F /* CMButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 066E031E16B48E1A00F4726F /* CMButtonView.m */; };
+		066E032316B48E1A00F4726F /* CMLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 066E032016B48E1A00F4726F /* CMLabelView.m */; };
 		06B70E7A16405BC90090EDF9 /* bar-cupcake.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B70E7816405BC90090EDF9 /* bar-cupcake.png */; };
 		06B70E7B16405BC90090EDF9 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B70E7916405BC90090EDF9 /* yellow.png */; };
 		06B70E7E16405C250090EDF9 /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B70E7D16405C250090EDF9 /* CMViewController.m */; };
@@ -40,11 +45,21 @@
 		060A0F2F163B56E10074BE29 /* ClassicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassicViewController.h; sourceTree = "<group>"; };
 		060A0F30163B56E10074BE29 /* ClassicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassicViewController.m; sourceTree = "<group>"; };
 		060A0F31163B56E10074BE29 /* ClassicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassicViewController.xib; sourceTree = "<group>"; };
+		061F8C4316B0A77D003D58C6 /* CMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMObject.h; sourceTree = "<group>"; };
+		061F8C4416B0A77D003D58C6 /* CMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMObject.m; sourceTree = "<group>"; };
 		065FF3F0169BCF2300D5AE33 /* Example1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Example1.js; sourceTree = "<group>"; };
 		065FF3F3169BD04900D5AE33 /* CMParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMParser.h; sourceTree = "<group>"; };
 		065FF3F4169BD04900D5AE33 /* CMParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMParser.m; sourceTree = "<group>"; };
 		065FF3F6169BD26C00D5AE33 /* CMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMWindow.h; sourceTree = "<group>"; };
 		065FF3F7169BD26C00D5AE33 /* CMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMWindow.m; sourceTree = "<group>"; };
+		066E031816B48D9400F4726F /* CMBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseView.h; sourceTree = "<group>"; };
+		066E031916B48D9400F4726F /* CMBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseView.m; sourceTree = "<group>"; };
+		066E031B16B48E1A00F4726F /* CMBaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBaseWindow.h; sourceTree = "<group>"; };
+		066E031C16B48E1A00F4726F /* CMBaseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBaseWindow.m; sourceTree = "<group>"; };
+		066E031D16B48E1A00F4726F /* CMButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMButtonView.h; sourceTree = "<group>"; };
+		066E031E16B48E1A00F4726F /* CMButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMButtonView.m; sourceTree = "<group>"; };
+		066E031F16B48E1A00F4726F /* CMLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLabelView.h; sourceTree = "<group>"; };
+		066E032016B48E1A00F4726F /* CMLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLabelView.m; sourceTree = "<group>"; };
 		06B70E7816405BC90090EDF9 /* bar-cupcake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-cupcake.png"; sourceTree = "<group>"; };
 		06B70E7916405BC90090EDF9 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		06B70E7C16405C250090EDF9 /* CMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMViewController.h; sourceTree = "<group>"; };
@@ -136,16 +151,50 @@
 		060A0F2C163B4C6E0074BE29 /* CoreMobile */ = {
 			isa = PBXGroup;
 			children = (
+				066E031616B48D7300F4726F /* Views */,
+				061F8C4216B0A74A003D58C6 /* Parser */,
+				061F8C4016B0A6AD003D58C6 /* Control */,
 				06B70E7F16405D880090EDF9 /* CMGlobals.h */,
 				06B70E8016405D880090EDF9 /* CMGlobals.m */,
-				065FF3F3169BD04900D5AE33 /* CMParser.h */,
-				065FF3F4169BD04900D5AE33 /* CMParser.m */,
+			);
+			name = CoreMobile;
+			sourceTree = "<group>";
+		};
+		061F8C4016B0A6AD003D58C6 /* Control */ = {
+			isa = PBXGroup;
+			children = (
 				06B70E7C16405C250090EDF9 /* CMViewController.h */,
 				06B70E7D16405C250090EDF9 /* CMViewController.m */,
 				065FF3F6169BD26C00D5AE33 /* CMWindow.h */,
 				065FF3F7169BD26C00D5AE33 /* CMWindow.m */,
 			);
-			name = CoreMobile;
+			name = Control;
+			sourceTree = "<group>";
+		};
+		061F8C4216B0A74A003D58C6 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				065FF3F3169BD04900D5AE33 /* CMParser.h */,
+				065FF3F4169BD04900D5AE33 /* CMParser.m */,
+				061F8C4316B0A77D003D58C6 /* CMObject.h */,
+				061F8C4416B0A77D003D58C6 /* CMObject.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		066E031616B48D7300F4726F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				066E031B16B48E1A00F4726F /* CMBaseWindow.h */,
+				066E031C16B48E1A00F4726F /* CMBaseWindow.m */,
+				066E031816B48D9400F4726F /* CMBaseView.h */,
+				066E031916B48D9400F4726F /* CMBaseView.m */,
+				066E031D16B48E1A00F4726F /* CMButtonView.h */,
+				066E031E16B48E1A00F4726F /* CMButtonView.m */,
+				066E031F16B48E1A00F4726F /* CMLabelView.h */,
+				066E032016B48E1A00F4726F /* CMLabelView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		06B70E7616405BB00090EDF9 /* Graphics */ = {
@@ -231,6 +280,11 @@
 				065FF3F1169BCF2300D5AE33 /* Example1.js in Sources */,
 				065FF3F5169BD04900D5AE33 /* CMParser.m in Sources */,
 				065FF3F8169BD26C00D5AE33 /* CMWindow.m in Sources */,
+				061F8C4516B0A77D003D58C6 /* CMObject.m in Sources */,
+				066E031A16B48D9400F4726F /* CMBaseView.m in Sources */,
+				066E032116B48E1A00F4726F /* CMBaseWindow.m in Sources */,
+				066E032216B48E1A00F4726F /* CMButtonView.m in Sources */,
+				066E032316B48E1A00F4726F /* CMLabelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

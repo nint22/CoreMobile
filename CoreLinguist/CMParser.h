@@ -17,6 +17,10 @@
 #import <Foundation/Foundation.h>
 
 @interface CMParser : NSObject
+{
+    // What is actually parsed
+    NSDictionary* ParseDictionary;
+}
 
 // Standard constructor; generates a form / screen with the Json-defined
 // layout. Also loads image files, etc.
@@ -24,6 +28,6 @@
 
 // Access the root object
 // All objects can be of a special CM-based type (such as CMImage, etc.)
--(NSDictionary*)GetForm;
+-(NSDictionary*)GetParseDictionary;
 
 @end

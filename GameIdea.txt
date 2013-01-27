@@ -1,0 +1,43 @@
+Project Name: Eon Defense
+Type: Generic Tower Defense Game
+Theme: ground Terran (human) race vs. robot-aliens; cell-shaded / vector art with shadows (think of space-game video I have)
+
+Over-world: Just an over-world map, which leads to sub-sections that have level listings
+
+A world is a simple 3D rendered model but laid out in 2D tiles: we're going to follow the advance-wars style / RPG maker style
+sprite sheet where putting sprites in combinations make inner-corners, outer-corners, etc. All enemies are in 2D sprite sheets.
+The art-style will be similar to Dwarf Fortress. Really should be like the Zelda Wind-Waker art-style.
+
+Game screens:
+
+- Splash Screen
+- Main Menu
+-- New Game
+--- Choose one of three save slots
+---- Same as "continue"
+-- Continue
+--- Choose one of three save slots
+---- Game over-world
+------ Over-world area
+------- Game prep (Able to buy pre-game upgrades or unlock)
+-------- Game play
+
+For gameplay, there are arbitrary random enemy mobs with little visible properties and a health and defense bar
+Users can translate and pinch-zoom into the world. Users drag-and-drop new buildings, and can single-click to change building
+properties. There are 5 towers, each tower going up to 3 levels, and can be given up for cash-back. There are global powers and
+upgrades that can be done. Users gain money after a level, and can use that for global upgrades (but never cary over into a game).
+
+Towers:
+
+	1. Gatling Gun: rapid-fire, low hit. Upgrades affect range
+	2. Sniper Gun: slow-fire, high hit. Upgrades affect speed
+	3. Sludge Shooter: slow-fire, but slows down enemy. Upgrades affect range
+	4. AoE Bombs: Throws AoE bombs. Upgrades affect speed (1 at a time up to 3 at a time)
+	5. Shock Tower: Shoots a chain-lighting effect. Upgrade the ammount of 
+
+Global Upgrades: (Cary's over unless destroyed in-game)
+
+	1. Auto-Bot Fixer: Up to 2 automated repair devices
+	2. Mine Robot: Runs around placing mines (up to 1)
+	3. Slow Robot: Runs around and stuns a mob
+	4. Default upgrade (same price during the start of a game, BUT upgraded to 2 or 3) (expensive)

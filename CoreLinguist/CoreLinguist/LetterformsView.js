@@ -33,7 +33,7 @@
 {
     // Form properties
     "Parent": "UIViewController",
-    "ViewMode: "Scroll",
+    "ViewMode": "Scroll",
     
     // Include header
     "UIView": "LetterformsHeader",
@@ -60,7 +60,7 @@
 }
 
 {
-	“Form Title”:
+	"Form Title":
 	{
 		"type":"Label",
 		"Value":"Race car profile",
@@ -70,7 +70,7 @@
 		"position":"188, 237",
 		"size":"237, 34",
 	},
-	“Driver Image”:
+	"Driver Image":
 	{
 		"type":"Image",
 		"Value":"DefaultImage.png",
