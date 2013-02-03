@@ -15,32 +15,24 @@
 #import "CMGlobals.h"
 #import "CMParser.h"
 
-/*** BaseView Delegate ***/
-
-// Handles all events that could be recieved to the code base
-// ... todo ...
-
-/*** BaseView Class ***/
-
-@interface CMBaseView : NSObject
+// Base view implementation
+@interface CMBaseView : UIView
 {
-    // Name of this object
-    NSString* ObjectName;
+    // Our active properties
+    CMPosition ViewPosition;    // Defines our position, relative to our parent (in pixels or percentage)
+    CMSize ViewSize;            // Defines our size, in pixels
+    CMLayout ViewLayout;        // Defines our layout, which is a mix of scale-behavior and aanchor-offset
     
-    // Parent name of object (i.e. what it derives from)
-    NSString* ParentTypeName;
-    
-    // Position and size, in pixels
-    CMPosition ViewPosition;
-    CMSize ViewSize;
-    
-    // Layout behavior; if a layout (anchor) is defined, then position is ignored
-    CMLayout ViewLayout;
+    // All sub-views
+    NSArray* SubViews;
 }
 
 /*** Public Functions ***/
 
 // Initialize a base view with ... todo ...
--(id)initViewName:(NSString*)BaseName fromJSONFile:(NSString*)FileName;
+-(id)initWithName:(NSString*)ViewName andProperties:(NSDictionary*)Properties andSubViews:(NSDictionary*)SubViews;
+
+// Access a sub-view by name; it is required you do so using the dot-delimited naming convention
+-(CMBaseView*)GetSubView:(NSString*)SubViewName;
 
 @end

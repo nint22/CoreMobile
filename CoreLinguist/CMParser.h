@@ -15,19 +15,20 @@
 ***************************************************************/
 
 #import <Foundation/Foundation.h>
+#import "CMBaseView.h"
+#import "CMObject.h"
 
 @interface CMParser : NSObject
 {
-    // What is actually parsed
-    NSDictionary* ParseDictionary;
+    // Our root parse object (which points to a parsed tree of objects)
+    CMObject* RootObject;
 }
 
-// Standard constructor; generates a form / screen with the Json-defined
-// layout. Also loads image files, etc.
--(id)init:(NSString*)JsonFile onError:(NSError**)ErrorOut;
+// Given a json file name (absolute file name) and the view key's name, attempt to parse
+// and load the views' data, without explicitly generating any overhead data (i.e. parse into the strict types)
+-(id)initWithJson:(NSString*)JsonFile withKeyName:(NSString*)KeyName onError:(NSError**)ErrorOut;
 
-// Access the root object
-// All objects can be of a special CM-based type (such as CMImage, etc.)
--(NSDictionary*)GetParseDictionary;
+// Generate the root object view that was the target to parse in the given json file and given key-name
+-(CMBaseView*)GenerateViews;
 
 @end

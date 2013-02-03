@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "CMParser.h"
+#import "CMViewController.h"
 
 @implementation AppDelegate
 
@@ -16,6 +18,22 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    /*** Testing ***/
+    
+    // Load string path of example json file
+    NSString* Path = [[NSBundle mainBundle] pathForResource:@"LetterformsView" ofType:@"js"];
+    
+    // Test parser...
+    NSError* Error = nil;
+    CMViewController* MyViewController = [[CMViewController alloc] initWithJson:Path withKeyName:@"MyView" onError:&Error];
+    
+    // On error, push out to log
+    if(Error != nil)
+        NSLog(@"Error info: %@", [Error localizedDescription]);
+    
+    // Test view loader...
+    
     return YES;
 }
 

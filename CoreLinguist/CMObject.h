@@ -7,18 +7,20 @@
  + Jeremy Bridon jbridon@cores2.com
  
  File: CMObject.h/m
- Desc: A parsed Json object.
+ Desc: A parsed Json object. Though it does map directly to a
+ CMBaseView (and all derived classes), it is not internally
+ parsed to the equivalent data-types. Almost all internals of
+ a CMObject is either a string or a dictionary of dictionaries / strings.
  
- ***************************************************************/
+***************************************************************/
 
 #import <Foundation/Foundation.h>
 #import "CMGlobals.h"
 
 // All view types
-static const int CMViewTypeCount = 20;
+static const int CMViewTypeCount = 19;
 typedef enum __CMViewType
 {
-    CMViewType_BaseWindow,
     CMViewType_BaseView,
     CMViewType_LabelView,
     CMViewType_ButtonView,
@@ -39,9 +41,8 @@ typedef enum __CMViewType
     CMViewType_PickerView,
     CMViewType_BarView,
 } CMViewType;
-static const NSString* CMViewNames[CMViewTypeCount] =
+static const NSString* const CMViewNames[CMViewTypeCount] =
 {
-    @"BaseWindow",
     @"BaseView",
     @"LabelView",
     @"ButtonView",
@@ -63,9 +64,30 @@ static const NSString* CMViewNames[CMViewTypeCount] =
     @"BarView",
 };
 
+// Object implementation
 @interface CMObject : NSObject
+{
+    // Name of this object
+    NSString* ObjectName;
+    
+    // Parent type of object (i.e. the base type that it derives from)
+    CMViewType BaseType;
+    
+    // Properties (local properties will overwrite parent properties)
+    NSMutableDictionary* Properties;
+    
+    // Sub-views (views owned by this object)
+    NSMutableDictionary* SubViews;
+}
 
-// Initialize the object with a given Json text-source object
--(id)init:(NSDictionary*)JsonObject;
+// Initialize the object with a given Json-parsed source
+// A tree of objects are built, representing the given view
+-(id)initWithKeyName:(NSString*)KeyName withJsonDict:(NSDictionary*)JsonValues onError:(NSError**)ErrorOut;
+
+// Get a reference (not copy) of all properties
+-(NSDictionary*)GetProperties;
+
+// Get a reference (not copy) of all sub-views
+-(NSDictionary*)GetSubViews;
 
 @end

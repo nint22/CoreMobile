@@ -23,7 +23,7 @@ typedef struct __CMPosition {
 
 // Initialize a CMPosition object
 inline CMPosition CMPositionMake(int32_t x, int32_t y);
-CMPosition CMPositionParse(NSString* string);
+CMPosition CMPositionParse(const NSString* string);
 
 // C-style size (as integer)
 typedef struct __CMSize {
@@ -32,7 +32,7 @@ typedef struct __CMSize {
 
 // Initialize a CMSize object
 inline CMSize CMSizeMake(int32_t width, int32_t height);
-CMSize CMSizeParse(NSString* string);
+CMSize CMSizeParse(const NSString* string);
 
 // C-style definition of pixel or percentage
 typedef enum __CMAnchorOffsetType {
@@ -62,7 +62,7 @@ enum __CMResizeType {
 typedef uint8_t CMResizeType;
 
 // Produce a bit-mask based on a given string of the form "Resize": "[[Tall][Wide]]"
-CMResizeType CMResizeParse(NSString* string);
+CMResizeType CMResizeParse(const NSString* string);
 
 // C-style bitmasks to represent the anchor sizes (streches width or height)
 enum __CMAnchorType {
@@ -75,10 +75,11 @@ enum __CMAnchorType {
 typedef uint8_t CMAnchorType;
 
 // Produce a bit-mask based on a given string of the form "Anchor":"[Right:<#px,#%>][Top:<#px,#%>][Left:<#px,#%>][Bottom:<#px,#%>]"
-CMAnchorType CMAnchorParse(NSString* string);
+CMAnchorType CMAnchorParse(const NSString* string);
 
-// Produce an anchor offset value for the given string and the associated right/top/left/bottom value
-CMAnchorOffset CMAnchorOffsetParse(NSString* type, NSString* string);
+// Produce an anchor offset value for the given string and the associated right/top/left/bottom value of
+// the form "Anchor":"[Right:<#px,#%>][Top:<#px,#%>][Left:<#px,#%>][Bottom:<#px,#%>]"
+CMAnchorOffset CMAnchorOffsetParse(const NSString* type, const NSString* string);
 
 // C-style layout definitions
 typedef struct __CMLayout {
@@ -97,18 +98,21 @@ inline CMLayout CMLayoutMake(CMAnchorType anchor, CMResizeType resize);
 /*** Obj-C Definitions ***/
 
 // Create and return an error
-inline NSError* NSErrorMake(NSString* ErrorMessage);
+inline NSError* NSErrorMake(const NSString* ErrorMessage);
 
 /*** Obj-C Keywords ***/
 
-static const NSString* CMKeyword_JSONParent = @"Parent";
-static const NSString* CMKeyword_JSONSize = @"Size";
-static const NSString* CMKeyword_JSONPosition = @"Position";
-static const NSString* CMKeyword_JSONLayout = @"Layout";
-static const NSString* CMKeyword_JSONLayoutAnchor = @"Anchor";
-static const NSString* CMKeyword_JSONLayoutResize = @"Resize";
-static const NSString* CMKeyword_JSONLayoutAnchorRight = @"Right";
-static const NSString* CMKeyword_JSONLayoutAnchorTop = @"Top";
-static const NSString* CMKeyword_JSONLayoutAnchorLeft = @"Left";
-static const NSString* CMKeyword_JSONLayoutAnchorBottom = @"Bottom";
+static NSString* const CMKeyword_JSONImports = @"Imports";
+static NSString* const CMKeyword_JSONParent = @"Parent";
+static NSString* const CMKeyword_JSONSize = @"Size";
+static NSString* const CMKeyword_JSONPosition = @"Position";
+static NSString* const CMKeyword_JSONLayout = @"Layout";
+static NSString* const CMKeyword_JSONLayoutResize = @"Resize";
+static NSString* const CMKeyword_JSONLayoutResizeWide = @"Wide";
+static NSString* const CMKeyword_JSONLayoutResizeTall = @"Tall";
+static NSString* const CMKeyword_JSONLayoutAnchor = @"Anchor";
+static NSString* const CMKeyword_JSONLayoutAnchorRight = @"Right";
+static NSString* const CMKeyword_JSONLayoutAnchorTop = @"Top";
+static NSString* const CMKeyword_JSONLayoutAnchorLeft = @"Left";
+static NSString* const CMKeyword_JSONLayoutAnchorBottom = @"Bottom";
 

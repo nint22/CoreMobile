@@ -13,7 +13,14 @@
 ***************************************************************/
 
 #import <UIKit/UIKit.h>
+#import "CMParser.h"
 
 @interface CMViewController : UIViewController
+
+// Initialization with a given JSON file name
+-(id)initWithJson:(NSString*)JsonFile withKeyName:(NSString*)KeyName onError:(NSError**)ErrorOut;
+
+// Get any given view and view property using the dot-notation
+-(id)GetView:(NSString*)KeyName;
 
 @end
